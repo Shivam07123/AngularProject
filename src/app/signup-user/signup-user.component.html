@@ -1,0 +1,49 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-header text-white">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="card-body text-white">
+          <form name="form" [formGroup]="userloginform" (ngSubmit)="userlogin()" >
+            <div class="mb-3">
+              <label for="fullname"  class="form-label">Name:</label>
+              <input type="text" name="fullname" formControlName="fullname" placeholder="Please Enter Your Name" class="form-control" id="fullname"  aria-describedby="emailHelp">
+              <span class="text-danger" *ngIf="userloginform.controls['fullname'].invalid && userloginform.controls['fullname'].touched">*Please Enter Valid Details</span>
+            </div>
+
+            <div class="mb-3 text-white">
+              <label for="exampleInputEmail1"  class="form-label">Email address:</label>
+              <input type="email" name="email" placeholder="Please Enter Your Email" formControlName="email" class="form-control" id="Mobile" aria-describedby="emailHelp">
+              <span class="text-danger" *ngIf="userloginform.controls['email'].invalid && userloginform.controls['email'].touched">*Please Enter Valid Details</span>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3 text-white">
+              <label for="Mobile" class="form-label">Mobile Number:</label>
+              <input type="number" name="mNumber" placeholder="Please Enter Your Mobile Number" formControlName="mNumber" class="form-control" id="Mobile" aria-describedby="emailHelp">
+              <span class="text-danger" *ngIf="userloginform.controls['mNumber'].invalid && userloginform.controls['mNumber'].touched">*Please Enter Valid Details</span>
+
+            </div>
+            <div class="mb-3">
+              <label for="Password1" class="form-label text-white">Password:</label>
+              <input type="password" name="password" class="form-control" formControlName="password" placeholder="Please Enter Your Password" id="Password1" >
+              <span class="text-danger" *ngIf="userloginform.controls['password'].invalid && userloginform.controls['password'].touched">*Please Enter Valid Details</span>
+
+            </div>
+            <div class="mb-3 form-check text-white">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label text-" for="exampleCheck1">Remember Password</label>
+            </div>
+            <button  type="submit" class="btn btn-primary text-white m-3" id="bat">Sign Up</button>
+          </form>
+          <a routerLink='/login' style="color: white;">Already Register? Click Here To Login</a>
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+

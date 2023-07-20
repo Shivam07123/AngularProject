@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-header text-white">
+          <h1>Login</h1>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginform" (ngSubmit)="loginuser()" >
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label text-white" >Email address</label>
+              <input type="email" name="email" placeholder="Enter Your Email" required formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <span class="text-danger" *ngIf="loginform.controls['email'].invalid && loginform.controls['email'].touched">*Please Enter Valid Details</span>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label text-white">Password</label>
+              <input type="password" formControlName="password"  required placeholder="Enter Your Password" class="form-control" id="exampleInputPassword1">
+              <span class="text-danger" *ngIf="loginform.controls['password'].invalid && loginform.controls['password'].touched">*Please Enter Valid Details</span>
+
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input text-white" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit"  class="btn btn-primary text-white m-3">Submit</button>
+          </form>
+          <a href="/signUp"   style="color: white; "> Not a User? Click Here To Sign Up </a>
+        </div>
+
+
+      </div>
+
+      </div>
+    </div>
+  </div>
