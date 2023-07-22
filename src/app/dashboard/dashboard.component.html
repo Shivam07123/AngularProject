@@ -19,12 +19,25 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success text-white" type="submit">Search</button>
         <button class="btn btn-danger btn-outline-primary" routerLink="/login"  >Logout</button>
       </form>
     </div>
   </div>
 </nav>
-<p>Dashboard</p>
+<div class="container-fluid">
+  <form action="" class="formGroup m-2 p-2"> <div class="table">
+    <div class="row">
+        <div class="col-2">
+        <i style="font-size: 20px; font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " class="m-2">Brand Mall</i>
+      </div><div class="col-6">
+        <input type="text" placeholder="Search Product" class="form-control ms-0 mt-2 p-2 " ></div>
+      <div class="col-3">
+    <button class="btn btn-dark btn-outline-primary ms-0 mt-2 text-dark">Search</button>
+  </div></div>
+  </div>
+  </form>
+  <img style="height: 500px; width:500px;" src="D:\VastuShanti\20210823145441_IMG_1583.JPG" >
+
+</div>
+
 <router-outlet></router-outlet>
